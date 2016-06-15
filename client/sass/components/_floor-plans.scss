@@ -1,0 +1,156 @@
+/* Floor Plan Tabs */
+
+#fp_tabs {
+    @include oneCol;
+    @include smoothText;
+    height: 30px;
+    color: $white;
+    font-size: 1.5em     /* 24px */;
+    font-weight: $bold;
+    margin: 30px auto 20px auto;
+    .fp_tab, .fp_tab--selected {
+        padding: 15px 25px;
+    }   
+    .fp_tab {
+        height: 20px;
+        line-height: 20px;
+        float: left;        
+        background: $orange;
+        a {
+           color: #fff;
+	       text-decoration: none; 
+        }
+    }  
+    .fp_tab--selected {
+        background: $blue;
+    }
+    @media (max-width:350px) { 	
+        font-size:1em;
+    }
+}
+
+/* Floor Plan Tab Content */
+
+.tab-content {
+	display: none;    
+    background: $blue;
+	padding: 30px 7.5%;
+    .fp-card {
+        display: inline-block;
+        width: 100%;
+        max-width: 600px;
+        font-size: .875em         /* 14px */;
+        line-height: 1.75em    /* 28px */;
+        text-transform: uppercase;
+        background: $white;
+    	margin: .5em;
+	vertical-align: top;
+        .fp-card_img {
+        width: 30%;
+        padding: 2.5% 5% 0 5%;
+	    transition:width .4s, border-color .5s ease, border-width .5s ease-in-out;
+	    
+        }
+        .fp-card_text {
+            display: inline-block;
+            width: 50%;        
+            padding: 10% 0;
+            max-width: 300px;
+            vertical-align: top;
+            .fp-card_name {
+                font-weight: $bold;
+            }
+            .fp-card_sqft, .fp-card_unit-mix {
+                font-family: $light;
+            }
+        }
+        .fp-card_cta-btn {
+            display: inline-block;    
+            margin: 10% 0;
+            padding: 5%;
+            width: 90%;            
+            @include smoothText;
+            line-height: 1.5em   /* 24px */;
+            font-weight: $bold;
+            letter-spacing: 2px;
+            text-align: center;
+            background: $orange;
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}
+
+#tab-1 {
+	display: block;   
+}
+
+
+/* Expanding Floor Plan Image */
+
+@media (min-width:500px){
+	.fp_card ul {
+			background:red;
+			margin-top:-75px;
+			margin-left:200px;
+			padding-bottom:25px;
+			li{
+				color:#ddd;
+				display: list-item;
+				font-size:1.5em;
+			}				
+	}
+}
+
+
+
+ul.xxx{
+    width: 84% !important;
+    padding: 0 0 4% 8% !important;
+    font-size: 1.75em   /* 28px */;
+    line-height: 1.25em /* 20px */;
+    @media (min-width: 641px) {
+        width: 30% !important;
+    }
+}
+
+
+.details {
+	display:none;
+    width: 84%;
+    padding: 0 8%;
+    font-family: $light;
+    font-size: .875em   /* 14px */;
+    @media (min-width: 641px) {
+        width: 50%;
+        float: right;
+        padding: 0 5%;        
+    }    
+}
+
+.xxx li  { /*this is added to the `ul` when img is big*/ 
+	position: relative;
+    
+}
+
+
+.nlb{ /*image class*/
+
+	/*width:150px;*/
+	/*transition:width 1s, border-color 1s ease, border-width 1s ease-in-out;*/
+}
+.big{ /*added to make img big*/ 
+	width:calc(100% - 80px) !important;
+	border: 10px solid $white;
+	pointer-events: none;
+		
+}
+
+
+
+.hide{
+	display:none;	
+}
+.show{
+	display:list-item;	
+}

@@ -1,0 +1,28 @@
+/* Summary */
+
+#summary_slider {
+    font-size: 2.5em /* 40px */;
+    .summary_slide {
+        .summary_slide-img {}
+        .summary_slide-tagline {
+            //color: $white;
+            display: inline;
+        }
+         .summary_slide-tagline--dark {
+             color: $gray;
+             display: inline;
+        }
+    }
+}
+
+#summary_intro {
+    @include oneCol;
+    font-family: $light;
+    font-size: 1em      /* 16px */;    
+    line-height: 1.5em /* 24px */;
+    letter-spacing: .05em;    
+    @media (min-width: 1024px) {
+        font-size: 1.25em    /* 20px */;
+        line-height: 1.75em    /* 28px */;
+    }
+}

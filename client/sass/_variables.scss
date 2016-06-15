@@ -1,0 +1,35 @@
+/* Colors */
+
+$white:     #ffffff;
+$gray:      #6d6e70;
+$ltgray:    #e5e6e7;
+$blue:      #0081c6;
+$orange:    #f7941d;
+
+/* Fonts */
+
+$sans:      "Montserrat", "Arial", sans-serif;
+$light:     'montserratLight', "Arial", sans-serif;
+$normal:    400;
+$bold:      700;
+
+
+/* Mixins */
+
+@mixin oneCol {
+    margin: 40px auto 0;
+    width: 85%;
+}
+
+@mixin smoothText {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin flatBtn {
+    border-radius: 0;
+    border: 0;
+   -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}

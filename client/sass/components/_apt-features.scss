@@ -1,0 +1,29 @@
+/* Apt. Features */
+
+.features__column {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px 0 5% 5%;
+    @media (max-width: 1024px) {    
+        width: 100%;
+        display: block;
+        margin: 30px 0 5% 0;        
+    }
+}
+
+.feature-list {
+    @include oneCol;
+    font-family: $light;
+    font-size: 0.9375em     /* 15px */;
+    line-height: 1.25em;   /* 20px */;
+    li {
+        list-style-type: square;
+        padding-bottom: 10px;
+        list-style-position: inside;
+    }
+    @media (min-width: 1024px) {
+        font-size: 1.25em    /* 20px */;
+        line-height: 1.5em    /* 24px */;
+    }    
+}

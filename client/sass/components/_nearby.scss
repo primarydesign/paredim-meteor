@@ -1,0 +1,41 @@
+/* Nearby Communities */
+#nearby {
+   @include oneCol;
+}
+#nearby_headline {
+    margin: 30px 0 !important;
+}
+
+.nearby-community {
+    @include smoothText;
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 3.25% 30px 0;
+    font-family: $light;
+    text-transform: uppercase;
+    background: $ltgray;
+    a {
+        color: $gray;
+        text-decoration: none;
+    }
+    .nearby-community_img {
+        width: 100%;
+    }
+    .nearby-community_name {
+        padding: 15px 20px;
+        font-size: 1.5em   /* 24px */;
+    }
+    .nearby-community_address {
+        padding: 0 20px 5px;
+        font-size: .75em    /* 12px */
+    }
+    .nearby-community_phone {
+        padding: 0 20px 20px;
+        letter-spacing: 1px;
+        a {
+            color:$gray;
+            text-decoration:none;
+        }
+    }
+}

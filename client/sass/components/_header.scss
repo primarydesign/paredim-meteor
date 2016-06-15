@@ -1,0 +1,70 @@
+/* Header */
+#header_paredim {
+    background: $white;
+    padding: 15px;
+    #header_paredim-logo {
+        width: 250px;
+    }
+    @media (min-width: 641px) {
+        @include oneCol;
+        margin-top: 5px;
+    }    
+}
+
+#header_featured-img {
+    width: 100%;
+}
+
+#header_community-details {
+    @include smoothText;
+    background: $blue;
+    color: $white;
+    padding: 15px 15px 15px 7.5%;
+    font-size: 1rem  /* 16px */;
+    line-height: 1.5em /* 24px */;
+    text-align: left;
+    text-transform: uppercase;
+    #header_community-name {
+        width: auto;
+        display: inline;  
+        font-size:1.5rem;
+        line-height:1.5rem;
+        font-weight: $bold;      
+        @media (min-width:400px) {
+            font-size: 1.75rem   /* 28px */;
+            line-height: 3rem;
+        }
+    }
+    #header_community-address, #header_community-phone {
+       // line-height: 2rem /* 36px */;
+    }
+	a {
+		color:white;
+		text-decoration:none;
+	}
+    #header_community-info {
+        @media (min-width: 961px) {
+            display: inline;
+            width: auto;
+            vertical-align: super;
+        }
+    }
+    #header_community-address, #header_community-phone {
+        @media (min-width: 641px) {
+            @include oneCol;
+            display: inline;
+            margin-top: 0;
+            margin: 0 15px 5px 0;    
+        }
+        @media (min-width: 961px) {
+            padding: 0;
+            margin: 0 30px;
+        }   
+        @media (min-width: 1180px) {
+            padding: 0;
+            margin: 0 0 0 100px ;
+        }           
+    }
+}
+
+

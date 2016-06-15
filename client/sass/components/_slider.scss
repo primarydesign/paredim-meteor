@@ -1,0 +1,324 @@
+
+#nikoSlider ul, #infiniteSlider ul{ 
+	
+	list-style-type:none;
+	padding:0; 
+	width:10000000px; /*fallback for IE*/ 	
+	width:10000000vw; /*Width needs to be long enough for ever li*/ 
+  	/*height:100vh;*/
+	
+}
+
+#nikoSlider #container, #infiniteSlider #container{
+    //width:97vw;
+    //border:2px solid blue;
+    overflow:hidden;
+}
+
+
+#nikoSlider li{
+	display:inline-block;
+	//display:none;
+	//border:1px solid orange;
+	background:#ddd;
+	font-size:4em;
+	line-height:4em;
+	transition: color 3s, margin .75s, opacity .5s, transform 2s;
+	padding:0;
+	margin:0;
+	width:100vw;
+	height:250px;
+	//width:calc(99vw/4);
+	//height:calc(99vh/4);*/
+	text-align:center;
+    @media (min-width:641px){
+        height:300px;
+    }  
+    @media (min-width:769px){
+        height:350px;
+        width:50vw;
+        margin-right: 5px;
+    }
+    @media (min-width:1281px){
+        height:400px;
+        width:33.333vw;
+        margin-right: 10px;
+    }
+    @media (min-width:2161px){
+        height:400px;
+        width:25vw;
+        margin-right: 15px;
+    }    
+}
+
+#nikoSlider li, #infiniteSlider li  {
+	float:left;
+}
+
+/*
+#nikoSlider li:first-child{ 
+	color:purple;
+	margin-left:-100vw;
+}
+*/
+
+#nikoSlider li:nth-child(1){ 
+	color:purple;
+	margin-left:-100vw;
+}
+
+
+
+#nikoSlider li:nth-child(2){
+	color:yellow;	
+}
+#nikoSlider li:nth-child(3){	
+	color:red;
+}
+
+#nikoSlider li:last-child{
+	color:pink;
+	opacity:0;
+}
+
+#nikoSlider #container{
+	text-align:center;
+}
+
+#nikoSlider #gallery_btn-next, #nikoSlider #gallery_btn-prev{
+	width:50px;
+	height:50px;
+	background:$blue;
+	border:none;
+}
+#nikoSlider #middleSpan{
+	height:50px;
+	background:#fff;
+	line-height:50px;
+}
+#nikoSlider #gallery_btn-next{
+	float:right;
+}
+
+#nikoSlider #gallery_btn-prev{
+	float:left;
+
+}
+#nikoSlider #container ul li{
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+}
+
+
+/* Infinite Slider */ 
+#infiniteSlider #container ul li {
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position-y:50%;
+}
+
+#infiniteSlider #one{
+	background-image: url('../images/slider/summit-at-mill-ridge-lounge.jpg');
+    background-position: 50% 35%;
+}
+
+#infiniteSlider #two{
+	background:url('../images/slider/summit-at-mill-ridge-entertainment-room.jpg');
+}
+
+#infiniteSlider #three{
+	background:url('../images/slider/summit-at-mill-ridge-fitness-center.jpg');
+}
+
+ #infiniteSlider li{
+  display:inline-block;
+  transition: color 6s, margin .75s, opacity 1.5s, line-height 1s;
+  padding:0;
+  margin:0;
+  width:100vw;
+  white-space:normal;
+  text-align:center;
+    height:300px;
+     @media (min-width: 641px) {
+         height:350px;
+     }
+     @media (min-width: 961px) {
+         height:400px;
+     }
+     @media (min-width: 1261px) {
+         height:500px;
+     }
+     @media (min-width: 1901px) {
+         height:650px;
+     }
+}
+ #infiniteSlider li p{
+  	font-size: 1em;
+	margin:auto;
+	width:80%;
+	margin-top:504px;
+	transition: margin 1s;
+ }
+#infiniteSlider li:first-child{ 
+	//margin-left:-100vw;
+    opacity:1;
+}
+#infiniteSlider li:nth-child(2){ 
+  	//line-height:504px;
+	opacity:1;
+}
+
+#infiniteSlider img{
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Summit */
+#slider-summit #a{
+	background:url('../images/slider/stony-brook-village-01.jpg');
+}
+#slider-summit #b{
+	background:url('../images/slider/stony-brook-village-02.jpg');
+}
+#slider-summit #d{
+	background:url('../images/slider/stony-brook-village-04.jpg');	
+}
+#slider-summit #c{
+	background:url('../images/slider/stony-brook-village-05.jpg');	
+}
+#slider-summit #f{
+	background:url('../images/slider/stony-brook-village-06.jpg');	
+}
+#slider-summit #g{
+	background:url('../images/slider/stony-brook-village-07.jpg');	
+}
+#slider-summit #h{
+	background:url('../images/slider/stony-brook-village-08.jpg');	
+}
+#slider-summit #i{
+	background:url('../images/slider/stony-brook-village-09.jpg');	
+}
+#slider-summit #j{
+	background:url('../images/slider/summit-at-mill-ridge-entertainment-room.jpg');	
+}
+#slider-summit #k{
+	background:url('../images/slider/summit-at-mill-ridge-fitness-center.jpg');
+}
+#slider-summit #l{
+	background:url('../images/slider/summit-at-mill-ridge-lounge.jpg');	
+}
+
+
+
+/* Soundview */
+
+#nikoSlider #slider-soundview #container ul li {
+    background-size: contain !important;
+}
+
+#slider-soundview #a{
+	background:url('../images/soundview/amenities_beach.jpg');
+}
+#slider-soundview #b{
+	background:url('../images/soundview/amenities_bedroom.jpg');
+
+}
+#slider-soundview #c{
+	background:url('../images/soundview/amenities_fitness.jpg');
+}
+#slider-soundview #d{
+	background:url('../images/soundview/amenities_kitchen.jpg');
+
+}
+#slider-soundview #e{
+	background:url('../images/soundview/amenities_livingroom.jpg');
+
+}
+#slider-soundview #f{
+	background:url('../images/soundview/amenities_pool.jpg');
+
+}
+#slider-soundview #g{
+	background:url('../images/soundview/amenities_view.jpg');
+
+}
+#slider-soundview #h{
+	background:url('../images/soundview/location_lighthouse.jpg');
+}
+#slider-soundview #i{
+	background:url('../images/soundview/location_rendering.jpg');
+
+
+}
+#slider-soundview #j{
+	background:url('../images/soundview/location_shopping.jpg');
+
+
+}
+#slider-soundview #k{
+	background:url('../images/soundview/location_stowes.jpg');
+
+
+}
+#slider-soundview #l{
+	background:url('../images/soundview/location_yale.jpg');
+
+}
+
+
+
+
+/* Royce */ 
+
+
+#slider-royce #a{
+	background:url('../images/royce/royce-trumbull-01.jpg');
+}
+#slider-royce #b{
+	background:url('../images/royce/royce-trumbull-02.jpg');
+}
+#slider-royce #c{
+	background:url('../images/royce/royce-trumbull-03.jpg');
+}
+#slider-royce #d{
+	background:url('../images/royce/royce-trumbull-04.jpg');
+}
+#slider-royce #e{
+	background:url('../images/royce/royce-trumbull-05.jpg');
+}
+#slider-royce #f{
+	background:url('../images/royce/royce-trumbull-06.jpg');
+}
+#slider-royce #g{
+	background:url('../images/royce/royce-trumbull-07.jpg');
+}
+#slider-royce #h{
+	background:url('../images/royce/royce-trumbull-08.jpg');
+}
+#slider-royce #i{
+	background:url('../images/royce/royce-trumbull-09.jpg');
+}
+

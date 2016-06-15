@@ -1,0 +1,42 @@
+/* Call to Action */
+
+#apply-cta {
+    @include smoothText;
+    clear: both;
+    background: $orange;
+    color: $white;
+    padding: 60px 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#apply-cta_headline {
+    font-size: 1.75em   /* 28px */;
+    line-height: 1em    /* 16px */;
+    padding-bottom: 15px;
+    font-weight: $bold;
+    @media (max-width:461px) {
+        font-size: 1.5rem   /* 24px */;
+        line-height: 1.5rem /* 24px */;
+    }    
+}
+
+#apply-cta_subhead {
+    font-size: .75rem   /* 12px */;
+    line-height: 1.5rem /* 24px */;
+    @media (min-width:461px) {
+        font-size: 1em   /* 16px */;
+    }  
+}
+
+#apply-cta_button {
+    font-size: 1em   /* 16px */;
+    line-height: 1.75em   /* 28px */;
+    letter-spacing: 2px;
+    margin: 15px;
+    padding: 10px 20px;
+    background: $white;
+    color: $orange;
+    font-weight: $bold;
+    @include flatBtn;
+}

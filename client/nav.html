@@ -1,0 +1,14 @@
+<template name="nav">
+	<!--<div id="timer">{{clock}}</div>-->
+	this is the nav
+	<ul>
+		<li><a href="{{pathFor route='home'}}">home</a></li>
+		<li><a href="{{pathFor route='communities'}}">communities</a></li>
+		<li><a href="{{pathFor route='about'}}">about</a></li>
+		<li><a href="{{pathFor route='contact'}}">contact</a></li>
+		<li><a href="{{pathFor route='residents'}}">residents</a></li>
+	
+	</ul>
+
+	{{> yield}}
+</template>

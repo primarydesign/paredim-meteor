@@ -1,0 +1,150 @@
+/* Mobile (Icon) Nav */
+
+#icon-nav {
+    #icon-nav_links {
+
+        .icon-nav_btn {
+            background: $gray !important;
+        }
+        .icon-nav_btn--current {
+            background: $orange !important;
+        }
+        .icon-nav_icon {
+            padding-top: 5px;
+            height: 25px;
+        }
+        .icon-nav_label {
+            padding-top: 25px;
+            font-size: .625em    /*  10px  */;
+            text-transform: uppercase;
+            color: $white;
+        }
+    }
+    @media (min-width:700px){
+	display:none;
+    }
+}
+
+/* Desktop (sticky) Nav */
+
+#header_nav{
+	width:100%;
+    z-index:999999;
+    
+    .active, .header_nav-item:hover {
+	    background:$orange;
+        transition: background .25s;
+    }
+
+    #header_nav-items {
+        width:100%;
+        background:$gray;
+        text-align:center;
+        z-index:999;
+        margin: 0;
+        padding: 0;
+        display: table;
+    }
+
+    .header_nav-item {
+        @include smoothText;
+        display: table-cell;
+        font-family: $light;
+        font-size: 1rem;
+        text-transform:uppercase;
+        letter-spacing: 1px;
+	width:25%;
+	
+        .header_nav-link {
+            color:$white;
+            display: block;
+            text-decoration:none;
+            padding: 1em 0 1em 0;
+            transition: color .25s;	
+            transition: background .25s;
+        }
+    }
+    @media (max-width:700px) {
+        display:none;
+    }
+}
+
+
+.stick{
+	position: fixed;
+	top: 0;
+	overflow:auto;
+ 	bottom:0; 
+	
+
+}
+
+/* Tzikas icon nav */
+
+#icon-nav{
+	position:fixed;
+	/*height:100px;*/
+	background:#0d75d5;
+	bottom:0;
+	width:100%;
+	
+}
+
+
+#icon-nav ul{
+    	margin: 0;
+    	padding: 0;
+	text-align:center;
+	display:table;
+	width:100%;
+	height:100%;
+
+
+	
+}
+
+
+#icon-nav ul li{
+	display:table-cell;
+	color:white;
+	width:16%;/*May bnot need this*/ 
+	height:100%;
+	
+}
+
+#icon-nav ul li a{
+	border: 1px solid white;
+	display: block;
+	padding: .5em 0 .5em 0;
+	height:100%;
+	
+}
+#icon-nav ul li a:hover{
+	background:$orange;
+}
+#icon-nav ul li a:active{
+	background:$ltgray;
+}
+
+#icon-nav ul li a:before{
+	display:block;
+	
+}
+
+.ion-ios-flask-outline{
+	font-size:2em;
+}
+#icon-nav ul li a span{
+	display:inline-block;
+	display: block;
+	height:100%;
+	margin-top:-15px;
+	
+	
+}
+#icon-nav img{
+	width:50px;
+	
+}
+
+
