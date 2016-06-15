@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 fourseven:scss
 seba:minifiers-autoprefixer
+hammer:hammer

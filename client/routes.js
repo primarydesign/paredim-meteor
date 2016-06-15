@@ -9,6 +9,18 @@ import Therma from '../imports/collections.js'
 import Uploads from '../imports/uploads.js'
 */
 
+Router.onRun(function(){
+  console.log('onRun');
+  //console.log('onRun', this.current().route.getName());
+  this.next();
+});
+
+Router.onBeforeAction(function(){
+  console.log('onBeforeAction');
+	
+  //console.log('onBeforeAction', this.current().route.getName());
+  this.next();
+});
 
 
 Router.map(function() {

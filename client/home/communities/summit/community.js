@@ -1,7 +1,5 @@
-Template.summit.onRendered(function(){
-	console.log('summit');
-
-
+Template.community.onRendered(function(){
+	console.log('new ccommunity rendered');
 
 	//TABS
 	$(".tabs-menu a").click(function(event) {
@@ -182,6 +180,98 @@ Template.summit.onRendered(function(){
 			err = 0;	
 		}
 	});
+
+
+
+
+
+
+	//SLIDER
+
+
+
+	var counter = 0;  //Set default image
+	function foo(){
+	    if ( 0 < counter){
+		counter--
+		//console.log(counter)   
+		classes();
+	    }
+		window.setTimeout(foo, 1);
+	}
+
+	foo()
+	$('#nikoSlider #gallery_btn-next').click(function(e){
+	    //if(counter==0){classes();} I need soemthing better here
+	    counter++;
+	})
+
+	$('#nikoSlider #gallery_btn-prev').click(function(e){
+	    counter--;
+	})
+
+	function classes(){
+		$('#nikoSlider ul').append($('#nikoSlider li:first-child')) 
+		middleSpan(1);
+	}
+
+	function backClasses(){
+		$('#nikoSlider ul').prepend($('#nikoSlider li:last-child')) 
+		middleSpan(-1);	
+	}
+
+	function bar(){
+	    if ( 0 > counter){
+		counter++;
+		//console.log(counter)   
+		backClasses();
+	    }
+		window.setTimeout(bar, 1);
+	}
+
+	bar()
+
+	/* Find num of pics*/
+	var i = 1;
+	var j = $('#nikoSlider li').length + 1;
+	function middleSpan(k){
+		i = i + k;
+		if(i < 1){
+			i = j; 
+		}
+		if (i > j){
+			i = 1; 
+		}
+		$('#middleSpan').html(i+'/'+j);
+	}
+	middleSpan(0)	
+
+
+	/*Infinite Slider*/
+
+
+	window.setInterval(function(){
+		$('#infiniteSlider ul').append($('#infiniteSlider li:first-child'))
+	},
+	3000); 
+
+
+
+
+	/*Drag Event*/
+	$(function(){
+	    // Bind the swiperightHandler callback function to the swipe event on div.box
+	  $( "#nikoSlider" ).on( "swiperight", function(){
+		counter--;
+	  });
+	  $( "#nikoSlider" ).on( "swipeleft", function(){
+		counter++; 
+	  });
+
+
+
+	})
+
 
 
 })
