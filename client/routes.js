@@ -31,6 +31,14 @@ Router.map(function() {
 		name: 'summit',
 		template: 'summit'			
 	});
+	this.route('/soundview', {
+		name: 'soundview',
+		template: 'soundview'			
+	});
+	this.route('/royce', {
+		name: 'royce',
+		template: 'royce'			
+	});
 	
 })
 
