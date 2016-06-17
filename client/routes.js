@@ -9,9 +9,17 @@ import Therma from '../imports/collections.js'
 import Uploads from '../imports/uploads.js'
 */
 
+import Words from '../imports/collections.js'
+
+import Uploads from '../imports/uploads.js'
+
+
 Router.onRun(function(){
   console.log('onRun');
   //console.log('onRun', this.current().route.getName());
+  console.log(this);
+  console.log($(this));
+  
   this.next();
 });
 
@@ -36,7 +44,20 @@ Router.map(function() {
 				console.log('communities');
 				this.render();
 			}
+		},
+		waitOn: function() {
+			return [
+				//Meteor.subscribe('items'),
+				Meteor.subscribe('uploads')
+			];
+		},
+		data: function() {
+			return {
+				//item: Items.findOne(),
+				uploads: Uploads.find()
+			}
 		}
+		
 			
 	});
 	this.route('/summit', {
@@ -59,6 +80,8 @@ Router.configure({
 	layoutTemplate: 'nav',
 	waitOn: function(){
 		//return Meteor.subscribe('therma');
+		 Meteor.subscribe('words');
+		 Meteor.subscribe('uploads');
 
 	}
 });

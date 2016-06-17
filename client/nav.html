@@ -1,6 +1,11 @@
 <template name="nav">
-	<!--<div id="timer">{{clock}}</div>-->
 	this is the nav
+	
+	<nav id="navigation">
+		<div>{{clock}}</div>
+		<div>admin: {{admin}}</div>
+		{{>signIn}}
+
 	<ul>
 		<li><a href="{{pathFor route='home'}}">home</a></li>
 		<li><a href="{{pathFor route='communities'}}">communities</a></li>
@@ -10,5 +15,19 @@
 	
 	</ul>
 
+	</nav>
+	<br>
+	<br>
+	<br>	<br>
+	<br>
+	<br>
+	<br>	<br>
+	<br>	<br>
+
+
+
+
 	{{> yield}}
 </template>
+
+

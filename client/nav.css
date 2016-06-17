@@ -1,0 +1,14 @@
+#navigation{
+	position:fixed;
+	padding-top:3em;
+	width:100%;
+	background:white;
+	border-bottom:1px solid black;
+	top:0;
+	
+}
+nav ul {
+	float:right;
+	text-align:right;
+	margin-top:-3em;
+}

@@ -1,3 +1,66 @@
 <template name="home">
-home
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	{{ > searchBox }} 
+	{{> map}}
+
 </template>
+
+
+<template name="map">  
+	<!--
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+  </div>
+	-->
+</template>  
+
+
+
+<template name="searchBox">
+	<div id ="search">
+
+    {{> EasySearch.Input index=markersIndex }}
+    <br>
+	
+    <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+
+    
+  </div>
+	
+
+    <hr>
+    <ul>DB
+        {{#EasySearch.Each index=markersIndex }}
+	<li><a href="{{pathFor route='communities'}}">{{name}}</a></li>	
+	<div class="ids">{{_id}} </div>
+	
+        {{/EasySearch.Each}}
+    </ul>
+    <br>
+    <hr>
+    <ul>local
+        {{#EasySearch.Each index=mapMarkersIndex }}
+	<li>Locatoin: {{name}}</li>
+        {{/EasySearch.Each}}
+    </ul>
+
+	</div>
+</template>
+
+
+

@@ -1,11 +1,191 @@
+
+
 <template name="communities">
-communities
+	<!--
+	communities
 	<ul>
 		<li><a href="{{pathFor route='summit'}}">summit</a></li>
 		<li><a href="{{pathFor route='royce'}}">royce</a></li>
 		<li><a href="{{pathFor route='soundview'}}">soundview</a></li>	
 	</ul>
+	-->
+	{{> summit}}
+
+	{{> signIn}}
+	{{>img}}
 	
+</template>
+
+<!--
+-->
+<template name="video">
+
+		<iframe height="515" src="https://www.youtube.com/embed/7IaYJZ2Usdk?start=39&autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+
+
+</template>
+
+
+
+
+
+
+
+
+
+<template name="e">
+
+
+	<div id="engineering" class="whiteBackground">	
+
+		
+
+
+		{{globalTimer}}
+		{{#if owner}}
+		<span class="timer">hello {{owner}}</span>
+		{{else}}
+		<p>Log in to make changes</p>
+		{{/if}}
+		<br>
+		<p id="blah" class="cms" contentEditable="{{owner}}">{{blah}}</p>
+		<p id="blah2" class="cms" contentEditable="{{owner}}">{{blah2}}</p>
+		<p id="blah3" class="cms" contentEditable="{{owner}}">{{blah3}}</p>
+
+
+
+
+		<p id="a" class="cms" contentEditable="{{owner}}">{{a}} this is niko</p>
+		<p id="b" class="cms" contentEditable="{{owner}}">{{b}} this is niko</p>
+		<p id="c" class="cms" contentEditable="{{owner}}">{{c}} this is niko</p>
+		
+		<br>
+		<br>
+		<ul>
+			<li id="listItem" class="cms" contentEditable="{{owner}}">{{listItem}}</li>
+			<li></li>
+			<li></li>
+		</ul>		
+		<br>
+		<br>
+
+
+		{{>signIn}}
+
+
+			<ul id="listStuff5" contentEditable="{{owner}}" class="cms">
+				<li>Plush Wall-to-Wall Carpet</li>
+				<li>Separate Dining Area</li>
+				<li>Gourmet Kitchen</li>
+				<li>Spacious Walk In Closets</li>
+				<li>Private Patio or Balcony</li>
+				<li>Washer/Dryer In-Unit</li>
+			</ul>
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		{{>img}}
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>		
+
+
+		<br>
+		<img src= "/upload/search.jpg" />
+		<br>
+
+
+
+
+		owner: {{owner}}
+		<button id="logOut">logOut</button>	
+	</div>
+
+
+
+
+
+
+	<div class="cms" contentEddtiable={{owner}}>
+	{{> summit}}
+	</div>
+
+
+</template>
+
+
+<template name="signIn">
+
+	<br><input type="text" id="password" placeholder="b"><br>
+	<input type="submit" value="Submit" id="submit">
+	
+	 <button id="logIn">LogIn</button>
+</template>
+
+
+
+
+
+
+
+<template name="img">
+	<div class="container">
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item">
+						{{> dropzone }}
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="panel">
+			<br><br><br>
+			<p>
+			{{> uploadedInfo uploads }}
+			</p>
+		</div>
+	</div>
+</template>
+
+
+<template name="uploadedInfo">
+	<div class="documentList">
+		<ul class="list-inline">
+			{{#each this}}
+			<li class="documentItem">
+				<a href="/upload/{{path}}"><img src="{{src}}"></a>
+	    	<img class="cms" src="{{src}}">
+
+				<br/>
+				<div class="details">
+
+					{{> dropzone }}
+
+					<label>{{ name }}</label> <br/>
+					{{ size }} B<br>
+					{{#if _id}}
+					<a class="btn btn-danger deleteUpload">Delete</a>
+					{{/if}}
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
 </template>
 
 

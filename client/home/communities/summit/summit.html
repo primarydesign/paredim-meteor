@@ -1,7 +1,7 @@
 <template name="summit">
 
 		{{>community}}
-		<header id="header">
+		<header id="header" class="cms" contentEditable={{owner}}>
 			<div id="header_paredim">
 				<img id="header_paredim-logo" src="assets/images/logo.svg" />
 			</div>
@@ -14,10 +14,14 @@
 			</div>
 			<div id="infiniteSlider">
 				<div id="container">
+					<!--
 					<ul>
 						<li id="one"></li>
 						<li id="one"></li>
 					</ul>
+					-->
+					{{> video}}
+					
 				</div>
 			</div>
 			<nav id="header_nav">
@@ -29,7 +33,7 @@
 				</ul>
 			</nav>
 		</header> 
-		<section id="summary">
+		<section id="summary" class="cms" contentEditable={{owner}}>
 			<div id="summary_slider"></div>
 			<h2 class="section_headline">You've Reached <em class="headline--bold">New Heights</em></h2>
 			<p id="summary_intro">WELCOME TO SUMMIT AT MILL RIDGE. Conveniently located in a picturesque and quiet setting on Mill Street between Routes 80 and 100 is a luxury apartment community that’s on top of it all. Our newly renovated apartment homes feature spacious layouts with elegant and modern finishes including energy efficient stainless steel appliances, designer cabinets and countertops and faux hardwood flooring. As a resident, you’ll have access to an amenity-rich lifestyle that’s above the rest as well as to Connecticut’s premier beaches and minutes from the nightlife and restaurants of Downtown New Haven. Reach new heights of luxury living when you make Summit at Mill Ridge your new apartment home.</p>
@@ -188,7 +192,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="features">
+		<section id="features" class="cms" contentEditable={{owner}}>
 			<div class="features__column">
 				<h2 class="section_headline"><em class="headline--bold">Property</em>  Features</h2>
 				<ul class="feature-list">
@@ -229,7 +233,9 @@
 	
 			</div>
 		</section>
-		<section id="gallery">
+		<section id="gallery" class="cms" contentEditable={{owner}}>
+  			{{#HammerTouchArea gestureMap=templateGestures}}
+			
 			<h2 id="gallery_headline">Photo Gallery</h2> 
 			<div id="nikoSlider">
 				<div id="slider-summit">
@@ -253,14 +259,17 @@
 					</div>
 				</div>
 			</div>
+
+			  {{/HammerTouchArea}}
+			
 		</section>	
-		<section id="apply-cta">
+		<section id="apply-cta" class="cms" contentEditable={{owner}}>
 			<h2 id="apply-cta_headline">Life's Great At The Top</h2>
 			<h3 id="apply-cta_subhead">Download Our Application Form Below</h3>
 			<a href="assets/pdf/paredim_rental_application.pdf" target="_blank"><button id="apply-cta_button">APPLY</button></a>
 
 		</section> 
-		<section id="nearby">
+		<section id="nearby" class="cms" contentEditable={{owner}}>
 			<h2 id="nearby_headline" class="section_headline">Nearby Communities <em class="headline--bold">You Might Like</em></h2>
 			<div class="nearby-community">
 				<img class="nearby-community_img" src="assets/images/nearby/royce.png">
@@ -279,7 +288,7 @@
 				</ul>
 			</div>
 		</section>
-		<section id="contact">
+		<section id="contact" class="cms" contentEditable={{owner}}>
 			<h2 class="section_headline headline--bold">Contact Us</h2>
 			<ul id="contact_info">
 				<li><a href="mailto:Summit@Paredim.com">Summit@Paredim.com</a></li>
@@ -314,10 +323,10 @@
 			</form>
 
 		</section> 
-		<section id="map">
+		<section id="map" class="cms" contentEditable={{owner}}>
 			<span><div id="googleMap"></div></span>			
 		</section>
-		<footer id="footer">
+		<footer id="footer" class="cms" contentEditable={{owner}}>
 			<nav id="footer__nav">
 				<ul id="footer__nav-links">
 					<li><a href="#floor-plans">Floor Plans</a></li>
@@ -332,7 +341,7 @@
 
 			<p id="footer__copyright">&copy; 2016 Paredim Communities. All Rights Reserved. Website by <a href="http://primarydesign.com">PRIMARY</a>.</p>
 
-			<section class="full">
+			<section  class="cms" contentEditable={{owner}}>
 				<nav id="icon-nav">
 
 					<ul id="icon-nav_links">

@@ -1,3 +1,7 @@
+import Words from '../../../imports/collections.js'
+import Uploads from '../../../imports/uploads.js'
+
+
 Template.community.onRendered(function(){
 	console.log('new ccommunity rendered');
 
@@ -180,6 +184,8 @@ Template.community.onRendered(function(){
 			err = 0;	
 		}
 	});
+
+
 
 
 })
